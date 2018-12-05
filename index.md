@@ -94,13 +94,13 @@ gcc编译参数调优
 - 运维工具：ansible,elk
 
 ### 阅读书籍
-C程序设计语言【C Programming Language】
-C++ Prime
-深入理解Linux内核【Understanding the Linux Kernel】
-高性能Mysql
-Spark快速大数据分析
-Redis实战
-Unix环境高级编程【Advancd Programing in the Unix Environment】
-Python学习手册【python learning】
-Python CookeBook
-Go程序设计语言【The Go Programming Language】
+- C程序设计语言【C Programming Language】
+- C++ Prime
+- 深入理解Linux内核【Understanding the Linux Kernel】
+- 高性能Mysql
+- Spark快速大数据分析
+- Redis实战
+- Unix环境高级编程【Advancd Programing in the Unix Environment】
+- Python学习手册【python learning】
+- Python CookeBook
+- Go程序设计语言【The Go Programming Language】
