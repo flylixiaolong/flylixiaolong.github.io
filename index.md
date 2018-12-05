@@ -9,8 +9,8 @@
  - 李小龙/男/1992 
  - 本科/中国石油大学(华东)/计算机科学与技术 
  - 工作年限：3年
+ - 在线简历GitPages：[https://flylixiaolong.github.io](https://flylixiaolong.github.io)
  - Github：[https://github.com/flylixiaolong](https://github.com/flylixiaolong)
-
  - 期望职位：python高级开发
  - 期望薪资：税前月薪16k~25k
  - 期望城市：上海
