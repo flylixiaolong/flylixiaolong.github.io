@@ -2,24 +2,25 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>index</title><link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
+<title>index</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; padding-bottom: 70px; overflow-x: visible; }
-.first-line-indent #write div, .first-line-indent #write li, .first-line-indent #write p { text-indent: 2em; }
-.first-line-indent #write div :not(p):not(div), .first-line-indent #write div.md-htmlblock-container, .first-line-indent #write p *, .first-line-indent pre { text-indent: 0px; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export p { white-space: pre-wrap; }
 @media screen and (max-width: 500px) { 
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   .CodeMirror-sizer { margin-left: 0px !important; }
   .CodeMirror-gutters { display: none !important; }
 }
-#write > blockquote:first-child, #write > div:first-child, #write > figure:first-child, #write > ol:first-child, #write > p:first-child, #write > pre:first-child, #write > ul:first-child { margin-top: 30px; }
 #write li > figure:first-child { margin-top: -20px; }
 #write ol, #write ul { position: relative; }
 img { max-width: 100%; vertical-align: middle; }
@@ -89,8 +90,8 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
 pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
-p > img:only-child { display: block; margin: auto; }
-p > .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
@@ -104,7 +105,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; text-align: cente
 .md-toc-content::after, .md-toc::after { display: none; }
 .md-toc-item { display: block; color: rgb(65, 131, 196); }
 .md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { }
+.md-toc-inner:hover { text-decoration: underline; }
 .md-toc-inner { display: inline-block; cursor: pointer; }
 .md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
 .md-toc-h2 .md-toc-inner { margin-left: 2em; }
@@ -150,34 +151,34 @@ iframe { max-width: 100%; width: 100%; border: none; }
     --control-text-color: #777;
 }
 
-@include-when-export url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
 
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
-    src: local('Open Sans Regular'),url('file:///Users/lixiaolong/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff') format('woff')
+    src: local('Open Sans Regular'),url('file:///Users/c_geek/Library/Application%20Support/abnerworks.Typora/themes/github/400.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Open Sans';
     font-style: italic;
     font-weight: normal;
-    src: local('Open Sans Italic'),url('file:///Users/lixiaolong/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff') format('woff')
+    src: local('Open Sans Italic'),url('file:///Users/c_geek/Library/Application%20Support/abnerworks.Typora/themes/github/400i.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: bold;
-    src: local('Open Sans Bold'),url('file:///Users/lixiaolong/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff') format('woff')
+    src: local('Open Sans Bold'),url('file:///Users/c_geek/Library/Application%20Support/abnerworks.Typora/themes/github/700.woff') format('woff');
 }
 
 @font-face {
     font-family: 'Open Sans';
     font-style: italic;
     font-weight: bold;
-    src: local('Open Sans Bold Italic'),url('file:///Users/lixiaolong/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff') format('woff')
+    src: local('Open Sans Bold Italic'),url('file:///Users/c_geek/Library/Application%20Support/abnerworks.Typora/themes/github/700i.woff') format('woff');
 }
 
 html {
@@ -190,11 +191,10 @@ body {
     line-height: 1.6;
 }
 
-#write{
+#write {
     max-width: 860px;
   	margin: 0 auto;
-  	padding: 20px 30px 40px 30px;
-	padding-top: 20px;
+  	padding: 30px;
     padding-bottom: 100px;
 }
 #write > ul:first-child,
@@ -202,12 +202,6 @@ body {
     margin-top: 30px;
 }
 
-body > *:first-child {
-    margin-top: 0 !important;
-}
-body > *:last-child {
-    margin-bottom: 0 !important;
-}
 a {
     color: #4183C4;
 }
@@ -230,7 +224,7 @@ h3:hover a.anchor,
 h4:hover a.anchor,
 h5:hover a.anchor,
 h6:hover a.anchor {
-    /*background: url("file:///Users/lixiaolong/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
+    /*background: url("file:///Users/c_geek/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
     text-decoration: none;
 }
 h1 tt,
@@ -305,42 +299,6 @@ hr {
     box-sizing: content-box;
 }
 
-body > h2:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h1:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h1:first-child + h2 {
-    margin-top: 0;
-    padding-top: 0;
-}
-body > h3:first-child,
-body > h4:first-child,
-body > h5:first-child,
-body > h6:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-a:first-child h1,
-a:first-child h2,
-a:first-child h3,
-a:first-child h4,
-a:first-child h5,
-a:first-child h6 {
-    margin-top: 0;
-    padding-top: 0;
-}
-h1 p,
-h2 p,
-h3 p,
-h4 p,
-h5 p,
-h6 p {
-    margin-top: 0;
-}
 li p.first {
     display: inline-block;
 }
@@ -438,12 +396,6 @@ code {
   margin-left: -1.3em;
 }
 
-@media screen and (min-width: 914px) {
-    /*body {
-        width: 854px;
-        margin: 0 auto;
-    }*/
-}
 @media print {
     html {
         font-size: 13px;
@@ -556,23 +508,21 @@ header, .context-menu, .megamenu-content, footer{
     --item-hover-bg-color: #E6F0FE;
 }
 
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
 
  .typora-export p, .typora-export .footnote-line {white-space: normal;} 
 </style>
 </head>
 <body class='typora-export' >
-<div  id='write'  class = 'is-mac'><h2><a name='header-n356' class='md-header-anchor '></a>联系方式</h2><ul><li>手机：18616210489</li><li>Email：<a href='mailto:fly_lxl@foxmail.com' target='_blank' class='url'>fly_lxl@foxmail.com</a></li><li>微信号：18616210489 （C_Geek)</li></ul><hr /><h2><a name='header-n366' class='md-header-anchor '></a>个人信息</h2><ul><li>李小龙/男/1992 </li><li>本科/中国石油大学(华东)/计算机科学与技术 </li><li>工作年限：3年</li><li>在线简历GitPages：<a href='https://flylixiaolong.github.io'>https://flylixiaolong.github.io</a></li><li>Github：<a href='https://github.com/flylixiaolong'>https://github.com/flylixiaolong</a></li><li>期望职位：python高级开发</li><li>期望薪资：税前月薪16k~25k</li><li>期望城市：上海</li></ul><hr /><h2><a name='header-n385' class='md-header-anchor '></a>工作经历</h2><h3><a name='header-n386' class='md-header-anchor '></a>店达商城（ 2017年12月 ~ 至今 ）</h3><h6><a name='header-n387' class='md-header-anchor '></a>主要技术</h6><p>nodejs、express、mysql、rabbitmq、redis、hprose(RPC)、elk</p><h6><a name='header-n389' class='md-header-anchor '></a>店达商城后端管理系统整合项目</h6><p>主要负责店达商城后端系统的合并和裁剪，合并/裁剪掉了部分可有可无的系统服务。实现已有的后端管理系统的单点登录功能(基于主域名cookie/session共享原理)，完成了12个业务管理系统的单点登录。兼容不同框架(express/koa)以及不同的项目架构(前后端分离与不分离项目)</p><h6><a name='header-n392' class='md-header-anchor '></a>优惠分摊项目 </h6><p>已有的订单逻辑不能满足财务对账的功能，并且出现退货时，优惠金额不算在订单金额内，造成一定的业务亏损。对已有的订单系统进行改造，完成从RPC到HTTP API的迁移工作。对已有的退货逻辑进行改造，按照优惠分摊后的SKU金额进行退货。</p><h6><a name='header-n395' class='md-header-anchor '></a>其他项目</h6><p>猪行侠(配送APP)后端重构
-商城库存管理系统优化</p><h3><a name='header-n398' class='md-header-anchor '></a>明码生物 （ 2016年4月 ~ 2017年9月 ）</h3><h6><a name='header-n399' class='md-header-anchor '></a>主要技术</h6><p>python、django、mysql、rabbitmq、redis、docker/docker-compose、jenkins、nginx、uwsgi</p><h6><a name='header-n401' class='md-header-anchor '></a>LIMS-ext项目 </h6><p>对接实验室信息管理系统(LIMS)和CSA系统，实现部分分析流程的自动化，并根据分析结果生产成PDF报告。负责实现从html到pdf的自动转换，根据分析结果生成对应的pdf报告。Django项目。</p><h6><a name='header-n404' class='md-header-anchor '></a>Jenkins持续集成</h6><p>实现项目的持续集成，打通Gitlab和Jenkins，根据不同的git分支或tag进行部署，测试环境按照开发分支每次提交即构建并执行代码测试和测试覆盖度坚持，完成后发送结果邮件。</p><h6><a name='header-n407' class='md-header-anchor '></a>其他项目</h6><p>selenium+phantomjs的自动化测试，selenium+phantomjs的爬虫
-airflow工作流管理</p><hr /><h3><a name='header-n410' class='md-header-anchor '></a>中科院通用芯片与基础软件研究中心 （ 2015年7月 ~ 2016年4月 ）</h3><h6><a name='header-n411' class='md-header-anchor '></a>主要技术</h6><p>linux、vim、python、c、gcc、shell、gdb</p><hr /><h6><a name='header-n414' class='md-header-anchor '></a>Linux系统性能自动化测试项目</h6><p>编写自动化脚本，运行Benchmark, 并对Benchmark运行结果进行提取，生成性能测试的PDF报告。对不同的两个系统的测试结果生产性能对比报告。</p><h6><a name='header-n417' class='md-header-anchor '></a>ICC/GCC下lbench位操作性能差异分析</h6><p>用不同的编译器icc/gcc编译lbench后，发现在统一系统下lbench运行结果，位操作速度icc编译后的版本要比gcc版本快两个数量级。对此裁剪lbench代码，写测试代码，并对代码进行反汇编分析性能差异的具体原因</p><h6><a name='header-n419' class='md-header-anchor '></a>其他项目</h6><p>linux文件系统分析
-gcc编译参数调优</p><hr /><h2><a name='header-n422' class='md-header-anchor '></a>开源项目</h2><ul><li><a href='https://github.com/flylixiaolong/MQ-Reconnect#readme'>mq-reconnect</a>: 对amqplib的简单封装，实现断线重连机制，并提供更简单的使用接口</li></ul><h2><a name='header-n427' class='md-header-anchor '></a>主要技能</h2><p>以下均为我熟练使用的技能</p><ul><li>Web开发：python, nodejs</li><li>Web框架：django/flask, express</li><li>数据库相关：mysql/redis</li><li>版本控制：git/svn</li><li>代码调试：pdb/gdb</li><li>文本编辑：vim</li><li>运维工具：ansible,elk</li></ul><h3><a name='header-n444' class='md-header-anchor '></a>阅读书籍</h3><p>C程序设计语言【C Programming Language】
-C++ Prime
-深入理解Linux内核【Understanding the Linux Kernel】
-高性能Mysql
-Spark快速大数据分析
-Redis实战
-Unix环境高级编程【Advancd Programing in the Unix Environment】
-Python学习手册【python learning】
-Python CookeBook
-Go程序设计语言【The Go Programming Language】</p></div>
+<div  id='write'  class = 'is-mac'><h2><a name='header-n566' class='md-header-anchor '></a>联系方式</h2><ul><li>手机：18616210489</li><li>Email：<a href='mailto:fly_lxl@foxmail.com' target='_blank' class='url'>fly_lxl@foxmail.com</a></li><li>微信号：18616210489 （C_Geek)</li></ul><hr /><h2><a name='header-n576' class='md-header-anchor '></a>个人信息</h2><ul><li>李小龙/男/1992 </li><li>本科/中国石油大学(华东)/计算机科学与技术 </li><li>工作年限：3年</li><li>在线简历GitPages：<a href='https://flylixiaolong.github.io'>https://flylixiaolong.github.io</a></li><li>Github：<a href='https://github.com/flylixiaolong'>https://github.com/flylixiaolong</a></li><li>期望职位：python高级开发</li><li>期望薪资：税前月薪16k~25k</li><li>期望城市：上海</li></ul><hr /><h2><a name='header-n595' class='md-header-anchor '></a>工作经历</h2><h3><a name='header-n596' class='md-header-anchor '></a>店达商城（ 2017年12月 ~ 至今 ）</h3><h6><a name='header-n597' class='md-header-anchor '></a>主要技术</h6><p>nodejs, express, mysql, rabbitmq, redis, hprose(RPC), elk</p><h6><a name='header-n599' class='md-header-anchor '></a>店达商城后端管理系统整合项目</h6><p>主要负责店达商城后端系统的合并和裁剪，合并/裁剪掉了部分可有可无的系统服务。实现已有的后端管理系统的单点登录功能(基于主域名cookie/session共享原理)，完成了12个业务管理系统的单点登录。兼容不同框架(express/koa)以及不同的项目架构(前后端分离与不分离项目)</p><h6><a name='header-n602' class='md-header-anchor '></a>优惠分摊项目 </h6><p>已有的订单逻辑不能满足财务对账的功能，并且出现退货时，优惠金额不算在订单金额内，造成一定的业务亏损。对已有的订单系统进行改造，完成从RPC到HTTP API的迁移工作。对已有的退货逻辑进行改造，按照优惠分摊后的SKU金额进行退货。</p><h6><a name='header-n605' class='md-header-anchor '></a>其他项目</h6><p>猪行侠(配送APP)后端重构
+商城库存管理系统优化</p><h3><a name='header-n608' class='md-header-anchor '></a>明码生物 （ 2016年4月 ~ 2017年9月 ）</h3><h6><a name='header-n609' class='md-header-anchor '></a>主要技术</h6><p>python, django, celery, mysql, rabbitmq, redis, docker/docker-compose, jenkins, nginx, uwsgi</p><h6><a name='header-n611' class='md-header-anchor '></a>LIMS-ext项目 </h6><p>对接实验室信息管理系统(LIMS)和CSA系统，实现部分分析流程的自动化，并根据分析结果生产成PDF报告。负责实现从html到pdf的自动转换，根据分析结果生成对应的pdf报告。Django项目。</p><h6><a name='header-n614' class='md-header-anchor '></a>Jenkins持续集成</h6><p>实现项目的持续集成，打通Gitlab和Jenkins，根据不同的git分支或tag进行部署，测试环境按照开发分支每次提交即构建并执行代码测试和测试覆盖度坚持，完成后发送结果邮件。</p><h6><a name='header-n617' class='md-header-anchor '></a>其他项目</h6><p>selenium+phantomjs的自动化测试，selenium+phantomjs的爬虫
+airflow工作流管理</p><hr /><h3><a name='header-n620' class='md-header-anchor '></a>中科院通用芯片与基础软件研究中心 （ 2015年7月 ~ 2016年4月 ）</h3><h6><a name='header-n621' class='md-header-anchor '></a>主要技术</h6><p>linux, vim, python, c, gcc, shell, gdb</p><hr /><h6><a name='header-n624' class='md-header-anchor '></a>Linux系统性能自动化测试项目</h6><p>编写自动化脚本，运行Benchmark,  并对Benchmark运行结果进行提取，生成性能测试的PDF报告。对不同的两个系统的测试结果生产性能对比报告。</p><h6><a name='header-n627' class='md-header-anchor '></a>ICC/GCC下lbench位操作性能差异分析</h6><p>用不同的编译器icc/gcc编译lbench后，发现在统一系统下lbench运行结果，位操作速度icc编译后的版本要比gcc版本快两个数量级。对此裁剪lbench代码，写测试代码，并对代码进行反汇编分析性能差异的具体原因</p><h6><a name='header-n629' class='md-header-anchor '></a>其他项目</h6><p>linux文件系统分析
+gcc编译参数调优</p><hr /><h2><a name='header-n632' class='md-header-anchor '></a>开源项目</h2><ul><li><a href='https://github.com/flylixiaolong/MQ-Reconnect#readme'>mq-reconnect</a>: 对amqplib的简单封装，实现断线重连机制，并提供更简单的使用接口</li></ul><h2><a name='header-n637' class='md-header-anchor '></a>主要技能</h2><p>以下均为我熟练使用的技能</p><ul><li>Web开发：python,  nodejs</li><li>Web框架：django/flask,  express</li><li>数据库相关：mysql/redis</li><li>版本控制：git/svn</li><li>代码调试：pdb/gdb</li><li>文本编辑：vim</li><li>运维工具：ansible, elk</li><li>Python package: celery, sqlalchemy, scrapy, airflow, selenium, requests</li><li>NPM package: request,  async,  sequelize,  lodash,  moment,  amqplib </li></ul><h3><a name='header-n658' class='md-header-anchor '></a>阅读书籍</h3><ul><li>C程序设计语言【C Programming Language】</li><li>C++ Prime</li><li>深入理解Linux内核【Understanding the Linux Kernel】</li><li>高性能Mysql</li><li>Spark快速大数据分析</li><li>Redis实战</li><li>Unix环境高级编程【Advancd Programing in the Unix Environment】</li><li>Python学习手册【python learning】</li><li>Python CookeBook</li><li>Go程序设计语言【The Go Programming Language】</li></ul></div>
 </body>
 </html>
