@@ -104,5 +104,5 @@ gcc编译参数调优
 - Redis实战
 - Unix环境高级编程【Advancd Programing in the Unix Environment】
 - Python学习手册【python learning】
-- Python CookeBook
+- Python CookBook
 - Go程序设计语言【The Go Programming Language】
