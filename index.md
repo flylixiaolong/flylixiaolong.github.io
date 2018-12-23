@@ -13,8 +13,8 @@
  - 工作年限：3年
  - 在线简历GitPages：[https://flylixiaolong.github.io](https://flylixiaolong.github.io)
  - Github：[https://github.com/flylixiaolong](https://github.com/flylixiaolong)
- - 期望职位：后端开发【python/go】**OR** 全栈开发【偏后端】
- - 熟练掌握Python/Nodejs/Go
+ - 期望职位：后端开发工程师
+ - 熟练掌握：Python/Nodejs/Go
  - 期望城市：上海
 
 ---
